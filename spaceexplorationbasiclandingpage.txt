@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Space Exploration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000033;
+            color: #ffffff;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: url('space.jpg') no-repeat center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 48px;
+        }
+        section {
+            padding: 40px 0;
+        }
+        section h2 {
+            font-size: 36px;
+        }
+        section p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Space Exploration</h1>
+        </header>
+        <section>
+            <h2>About Space Exploration</h2>
+            <p>Space exploration is the ongoing discovery and exploration of celestial structures in outer space by means of continuously evolving and growing space technology.</p>
+        </section>
+    </div>
+</body>
+</html>
