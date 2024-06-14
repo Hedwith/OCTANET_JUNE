@@ -1,0 +1,46 @@
+class Task:
+    def __init__(self, description):
+        self.description = description
+        self.completed = False
+
+class ToDoList:
+    def __init__(self):
+        self.tasks = []
+
+    def add_task(self, task):
+        self.tasks.append(task)
+
+    def view_tasks(self):
+        for i, task in enumerate(self.tasks, 1):
+            status = '[x]' if task.completed else '[ ]'
+            print(f'{i}. {status} {task.description}')
+
+    def mark_completed(self, task_number):
+        if 1 <= task_number <= len(self.tasks):
+            self.tasks[task_number - 1].completed = True
+        else:
+            print('Invalid task number.')
+
+if __name__ == '__main__':
+    my_list = ToDoList()
+
+    while True:
+        print('\n1. Add task')
+        print('2. View tasks')
+        print('3. Mark completed')
+        print('4. Quit')
+
+        option = input('Choose an option: ')
+
+        if option == '1':
+            task_description = input('Enter a task description: ')
+            my_list.add_task(Task(task_description))
+        elif option == '2':
+            my_list.view_tasks()
+        elif option == '3':
+            task_number = int(input('Enter the task number to mark as completed: '))
+            my_list.mark_completed(task_number)
+        elif option == '4':
+            break
+        else:
+            print('Invalid option.')
